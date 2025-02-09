@@ -1,0 +1,87 @@
+/* book_list.css */
+.page-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    width: 300px; /* Adjust width as needed */
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column; /* Makes it a vertical list */
+    gap: 15px; /* Space between cards */
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.card-author {
+    color: #6c757d; /* Bootstrap muted text color */
+    font-size: 1.2em;
+}
+
+.card-summary {
+    margin: 10px 0;
+}
+
+.card-isbn {
+    font-size: 0.9em;
+    color: #495057; /* Bootstrap text color */
+}
+
+.btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.step-links {
+    display: flex;
+    gap: 10px;
+}
+
+.step-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.step-links .current {
+    padding: 0 10px;
+}

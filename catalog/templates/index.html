@@ -1,0 +1,44 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+    <title>Willy's Library</title>
+{% endblock %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <h1 class="home-title">Welcome to Willy's Library</h1>
+    <p class="home-welcome">
+        Welcome to LocalLibrary, a website developed by <em>William Pyne</em>!
+    </p>
+
+    <h2 class="section-title">At a glance</h2>
+    <p class="home-description">The library has the following record counts:</p>
+
+    <div class="record-grid">
+        <div class="record-card">
+            <strong>Books:</strong> {{ num_books }}
+        </div>
+        <div class="record-card">
+            <strong>Copies:</strong> {{ num_instances }}
+        </div>
+        <div class="record-card">
+            <strong>Copies available:</strong> {{ num_instances_available }}
+        </div>
+        <div class="record-card">
+            <strong>Authors:</strong> {{ num_authors }}
+        </div>
+        <div class="record-card">
+            <strong>Books by Joseph Conrad:</strong> {{ num_books_by_Joseph_Conrad }}
+        </div>
+        <div class="record-card">
+            <strong>Number of times you have visited this site:</strong> {{ num_visits }}
+        </div>
+    </div>
+{% endblock %}
+

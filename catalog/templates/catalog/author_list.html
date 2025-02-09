@@ -1,0 +1,33 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/author_list.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="page-title">Author List</h1>
+
+<form method="GET" class="search-form">
+    <input type="text" name="p" placeholder="Search by or author name" class="form-control"
+           value="{{ request.GET.p }}">
+    <button type="submit" class="btn btn-primary mt-2">Search</button>
+</form>
+
+{% if author_list %}
+<div class="card-list">
+    {% for author in author_list %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ author.last_name }} {{ author.first_name }}</h5>
+            <p class="card-birthday">by {{ author.date_of_birth }}</p>
+            <a href="{{ author.get_absolute_url }}" class="btn btn-primary">View Details</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% else %}
+<p>No authors available.</p>
+{% endif %}
+{% endblock %}
